@@ -18,7 +18,28 @@
 	NSDate *_itemDateCreated;
 }
 
+#pragma mark - Class methods
+//
+// Class methods
+//
++ (instancetype)randomItem;
+
+#pragma mark - Initializers
+//
+// Initializers
+//
+
+// Designated initializer for BNRItem
+- (instancetype)initWithItemName:(NSString *)name
+				  valueInDollars:(int)value
+					serialNumber:(NSString *)serialNumber;
+
+- (instancetype)initWithItemName:(NSString *)name;
+
+#pragma mark - getters and setters
+//
 // setters and getters
+//
 
 - (NSString *)itemName;
 - (void)setItemName:(NSString *)itemName;

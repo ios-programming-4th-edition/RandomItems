@@ -11,14 +11,12 @@
 
 int main(int argc, const char * argv[])
 {
-
 	@autoreleasepool {
 	    
 	    // insert code here...
 	    NSLog(@"Hello, World!");
 		
 		NSMutableArray *itemList = [[NSMutableArray alloc] init];
-		
 		[itemList addObject:@"one"];
 		[itemList addObject:@"two"];
 		[itemList addObject:@"three"];
@@ -28,18 +26,30 @@ int main(int argc, const char * argv[])
 			NSLog(@"%@", item);
 		}
 		
-		BNRItem *anItem = [[BNRItem alloc] init];
-		anItem.itemName = @"Red Sofa";
-		anItem.itemSerialNumber = @"A1B2C";
-		anItem.valueInDollars = 100;
-		NSLog(@"%@ %@ %@ %d", [anItem itemName], [anItem itemDateCreated], [anItem itemSerialNumber],
-			  [anItem valueInDollars] );
-		NSLog(@"%@ %@ %@ %d", anItem.itemName, anItem.itemDateCreated, anItem.itemSerialNumber,
-			  anItem.valueInDollars);
+		itemList = [[NSMutableArray alloc] init];
+		for (int i = 0; i < 10; i++) {
+			itemList[i] = [BNRItem randomItem];
+		}
+		
+		for (BNRItem *item in itemList) {
+			NSLog(@"%@", item);
+		}
+				
+		// Create a Red Sofa
+		BNRItem *redSofa = [[BNRItem alloc] initWithItemName:@"Red Sofa" valueInDollars:100 serialNumber:@"A1B2C"];
+		NSLog(@"%@", redSofa);
+		
+		// Create a Blue Sofa
+		BNRItem *blueSofa = [[BNRItem alloc] initWithItemName:@"Blue Sofa"];
+		NSLog(@"%@", blueSofa);
+		
+		// A unknown item
+		BNRItem *unknown = [[BNRItem alloc] init];
+		NSLog(@"%@", unknown);
 		
 		itemList = nil;
-	    
 	}
+	
     return 0;
 }
 
