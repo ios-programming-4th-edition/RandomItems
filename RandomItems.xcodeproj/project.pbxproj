@@ -10,6 +10,7 @@
 		9A9F61C118C2FFC50075E656 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9F61C018C2FFC50075E656 /* Foundation.framework */; };
 		9A9F61C418C2FFC50075E656 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9F61C318C2FFC50075E656 /* main.m */; };
 		9A9F61C818C2FFC50075E656 /* RandomItems.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A9F61C718C2FFC50075E656 /* RandomItems.1 */; };
+		9A9F61D018C3057D0075E656 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9F61CF18C3057D0075E656 /* BNRItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		9A9F61C318C2FFC50075E656 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A9F61C618C2FFC50075E656 /* RandomItems-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RandomItems-Prefix.pch"; sourceTree = "<group>"; };
 		9A9F61C718C2FFC50075E656 /* RandomItems.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RandomItems.1; sourceTree = "<group>"; };
+		9A9F61CE18C3057D0075E656 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
+		9A9F61CF18C3057D0075E656 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,8 @@
 			children = (
 				9A9F61C318C2FFC50075E656 /* main.m */,
 				9A9F61C718C2FFC50075E656 /* RandomItems.1 */,
+				9A9F61CE18C3057D0075E656 /* BNRItem.h */,
+				9A9F61CF18C3057D0075E656 /* BNRItem.m */,
 				9A9F61C518C2FFC50075E656 /* Supporting Files */,
 			);
 			path = RandomItems;
@@ -140,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A9F61C418C2FFC50075E656 /* main.m in Sources */,
+				9A9F61D018C3057D0075E656 /* BNRItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
