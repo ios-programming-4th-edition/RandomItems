@@ -34,6 +34,7 @@
 				  valueInDollars:(int)value
 					serialNumber:(NSString *)serialNumber;
 
+- (instancetype)initWithItemName:(NSString *)name serialNumber:(NSString *)serialNumber;
 - (instancetype)initWithItemName:(NSString *)name;
 
 #pragma mark - getters and setters

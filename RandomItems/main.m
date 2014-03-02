@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BNRItem.h"
+#import "BNRContainer.h"
 
 int main(int argc, const char * argv[])
 {
@@ -34,7 +35,17 @@ int main(int argc, const char * argv[])
 		for (BNRItem *item in itemList) {
 			NSLog(@"%@", item);
 		}
-				
+		
+		BNRContainer *container = [BNRContainer randomItem];
+		[container addSubItem:[BNRItem randomItem]];
+		[container addSubItem:[BNRItem randomItem]];
+		
+		BNRContainer *subContainer = [BNRContainer randomItem];
+		[subContainer addSubItem:[BNRItem randomItem]];
+		[subContainer addSubItem:[BNRItem randomItem]];
+		[container addSubItem:subContainer];
+		NSLog(@"%@", container);
+						
 		// Create a Red Sofa
 		BNRItem *redSofa = [[BNRItem alloc] initWithItemName:@"Red Sofa" valueInDollars:100 serialNumber:@"A1B2C"];
 		NSLog(@"%@", redSofa);
